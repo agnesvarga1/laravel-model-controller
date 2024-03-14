@@ -12,7 +12,7 @@
           <h4 class="card-title">{{$film['title']}}</h4>
           <h6 class="card-title"><span class="fw-light">Titolo originale: </span>{{$film['original_title']}}</h6>
           <p class="card-text">
-            {{$film["nationality"]}} | {{$film["date"]}} | Vote: {{$film["vote"]}}
+            {{$film["nationality"]}} | {{ \Carbon\Carbon::parse($film->date)->format('Y') }} | Vote: {{$film["vote"]}}
           </p>
 
         </div>
